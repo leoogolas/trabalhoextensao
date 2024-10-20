@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarte Consciente de Lixo Eletrônico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html">Formulário</a></li>
+            <li><a href="instrucoes.html">Instruções</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1 id="formulario">Descarte Consciente de Lixo Eletrônico</h1>
+            <form id="discardForm" action="/submit-discard" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="surname">Sobrenome:</label>
+                <input type="text" id="surname" name="surname" required>
+
+                <label for="phone">Telefone para Contato:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="item">Item:</label>
+                <input type="text" id="item" name="item" required>
+
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="date">Data:</label>
+                <input type="text" id="date" name="date" required>
+
+                <label for="time">Horário:</label>
+                <select id="time" name="time" required>
+                    <!-- Horários serão preenchidos dinamicamente via JavaScript -->
+                </select>
+
+                <label for="observations">Endereço com CEP e Ponto de referência:</label>
+                <textarea id="observations" name="observations"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
